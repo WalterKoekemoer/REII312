@@ -1,0 +1,12 @@
+<RCC>
+    <qresource prefix="/images">
+        <file>icons8-add-50.png</file>
+        <file>icons8-electronics-50.png</file>
+        <file>icons8-folder-50.png</file>
+        <file>icons8-heater-resistor-50.png</file>
+        <file>icons8-maintenance-50.png</file>
+        <file>icons8-play-50.png</file>
+        <file>icons8-save-50.png</file>
+        <file>icons8-wire-50.png</file>
+    </qresource>
+</RCC>
