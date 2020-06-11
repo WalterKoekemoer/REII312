@@ -1,22 +1,23 @@
-#ifndef VOLTAGESOURCE_H
-#define VOLTAGESOURCE_H
+#ifndef DEPCURRENTSRC_H
+#define DEPCURRENTSRC_H
 
 #include "component.h"
 
-class VoltageSource : public ComponentClass
+class depCurrentSrc: public ComponentClass
 {
 public:
-    enum {TypeC = QGraphicsItem::UserType + 6 };
+    enum {TypeDCS = UserType + 2 };
     int type() const
     {
-        return TypeC;
+        return TypeDCS;
     }
-    VoltageSource(QString name,QString Magnitude);
+
+    depCurrentSrc(QString name, QString Magnitude);
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     QRectF boundingRect() const;
     void setMagnitude(double magnitude);
-    void setConst(QString name);
     void setName(QString name);
+    void setConst(QString name);
     double getMagnitude() ;
     QString getName();
     QString getConstName();
@@ -29,4 +30,4 @@ private:
     QString ConstName;
 };
 
-#endif // VOLTAGESOURCE_H
+#endif // DEPCURRENTSRC_H

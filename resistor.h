@@ -1,32 +1,31 @@
-#ifndef VOLTAGESOURCE_H
-#define VOLTAGESOURCE_H
+#ifndef RESISTOR_H
+#define RESISTOR_H
 
 #include "component.h"
 
-class VoltageSource : public ComponentClass
+class Resistor: public ComponentClass
 {
 public:
-    enum {TypeC = QGraphicsItem::UserType + 6 };
+    enum {TypeR = QGraphicsItem::UserType + 5 };
     int type() const
     {
-        return TypeC;
+        return TypeR;
     }
-    VoltageSource(QString name,QString Magnitude);
+    Resistor(QString name, QString Magnitude);
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     QRectF boundingRect() const;
     void setMagnitude(double magnitude);
-    void setConst(QString name);
     void setName(QString name);
     double getMagnitude() ;
-    QString getName();
+    void setConst(QString name);
     QString getConstName();
+    QString getName();
     QPointF getPos();
     qreal getRot();
-
 private:
     QString name;
     double Magnitude;
     QString ConstName;
 };
 
-#endif // VOLTAGESOURCE_H
+#endif // RESISTOR_H

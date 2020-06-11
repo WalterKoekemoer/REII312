@@ -1,11 +1,13 @@
 #-------------------------------------------------
 #
-# Project created by QtCreator 2020-05-27T13:14:15
+# Project created by QtCreator 2020-05-31T13:43:59
 #
 #-------------------------------------------------
 
 QT       += core gui
 QT       += core
+QT       += widgets
+QT       += core gui svg
 
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -25,29 +27,37 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 
 SOURCES += main.cpp\
-        mainwindow.cpp \
-    elab.cpp \
-    viewwork.cpp \
-    voltagesource.cpp \
-    wire.cpp
+    addcomponent.cpp \
+    subcomponetsscene.cpp \
+    resistor.cpp \
+    inductor.cpp \
+    capacitor.cpp \
+    depcurrentsrc.cpp \
+    depvoltagesrc.cpp \
+    definecomponent.cpp \
+    widget.cpp \
+    wire.cpp \
+    mainscene.cpp \
+    voltagesource.cpp
 
-HEADERS  += mainwindow.h \
-    elab.h \
-    viewwork.h \
-    voltagesource.h \
-    wire.h
+HEADERS  += widget.h \
+    addcomponent.h \
+    subcomponetsscene.h \
+    resistor.h \
+    inductor.h \
+    capacitor.h \
+    depcurrentsrc.h \
+    depvoltagesrc.h \
+    definecomponent.h \
+    component.h \
+    wire.h \
+    connections.h \
+    mainscene.h \
+    voltagesource.h
 
-FORMS    += mainwindow.ui
-
-DISTFILES += \
-    icons8-add-50.png \
-    icons8-electronics-50.png \
-    icons8-folder-50.png \
-    icons8-heater-resistor-50.png \
-    icons8-maintenance-50.png \
-    icons8-play-50.png \
-    icons8-save-50.png \
-    icons8-wire-50.png
+FORMS    += widget.ui \
+    addcomponent.ui \
+    definecomponent.ui
 
 RESOURCES += \
     icons.qrc

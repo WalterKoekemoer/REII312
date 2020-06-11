@@ -1,15 +1,15 @@
-#ifndef WIRE_H
-#define WIRE_H
+#ifndef WIRE2_H
+#define WIRE2_H
 
 #include "component.h"
 #include "connections.h"
 #include <QDebug>
+#include "voltagesource.h"
 
-
-class wire : public Connections
+class Wire2 : public Connections
 {
 public:
-    wire(ComponentClass *compA, ComponentClass *compB, QPointF A, QPointF B);
+    Wire2(QGraphicsItem *compA, QGraphicsItem *compB, QPointF A, QPointF B);
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     QRectF boundingRect() const;
     QString connectedComponents();
@@ -24,5 +24,4 @@ private:
     qreal distanceA;
     qreal distanceB;
 };
-
-#endif // WIRE_H
+#endif // WIRE2_H

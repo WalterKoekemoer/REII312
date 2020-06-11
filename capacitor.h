@@ -1,17 +1,17 @@
-#ifndef VOLTAGESOURCE_H
-#define VOLTAGESOURCE_H
+#ifndef CAPACITOR_H
+#define CAPACITOR_H
 
 #include "component.h"
 
-class VoltageSource : public ComponentClass
+class Capacitor : public ComponentClass
 {
 public:
-    enum {TypeC = QGraphicsItem::UserType + 6 };
+    enum {TypeC = QGraphicsItem::UserType + 1 };
     int type() const
     {
         return TypeC;
     }
-    VoltageSource(QString name,QString Magnitude);
+    Capacitor(QString name, QString Magnitude);
     void paint(QPainter *painter, const QStyleOptionGraphicsItem *option, QWidget *widget);
     QRectF boundingRect() const;
     void setMagnitude(double magnitude);
@@ -29,4 +29,4 @@ private:
     QString ConstName;
 };
 
-#endif // VOLTAGESOURCE_H
+#endif // CAPACITOR_H
